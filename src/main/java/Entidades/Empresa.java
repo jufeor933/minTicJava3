@@ -1,18 +1,24 @@
 package Entidades;
 
-public class Empresa {
+import javax.persistence.*;
 
+//@Entity
+public class Empresa {
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private String nombre;
     private String direccion;
     private String telefono;
     private String nit;
+    //@ManyToOne
+    //@JoinColumn(name = "empleado_nombre")
 
 
     public Empresa() {
-        this.nombre = "";
-        this.direccion = "";
-        this.telefono = "";
-        this.nit = "";
+        this.nombre = "Perficient";
+        this.direccion = "calle 456";
+        this.telefono = "333-444-6789";
+        this.nit = "9876543-0";
     }
     public Empresa(String nombre, String direccion, String telefono, String nit) {
         this.nombre = nombre;
